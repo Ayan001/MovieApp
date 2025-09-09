@@ -37,7 +37,7 @@ object NetworkModule {
             .baseUrl(url)
             .addConverterFactory(ScalarsConverterFactory.create())
             .addConverterFactory(GsonConverterFactory.create())
-            .client(OkHttpClient.Builder().readTimeout(30, TimeUnit.MILLISECONDS).connectTimeout(30, TimeUnit.SECONDS).addInterceptor(loggingInterceptor).build())
+            .client(OkHttpClient.Builder().readTimeout(30, TimeUnit.SECONDS).connectTimeout(30, TimeUnit.SECONDS).addInterceptor(loggingInterceptor).build())
             .build()
 
     @Singleton
